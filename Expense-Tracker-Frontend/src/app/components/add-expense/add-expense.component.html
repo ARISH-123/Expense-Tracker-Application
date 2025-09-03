@@ -1,0 +1,25 @@
+<div class="container mt-5">
+  <h2>Add Expense</h2>
+  <div class="mb-3">
+    <label>Title</label>
+    <input type="text" [(ngModel)]="title" class="form-control">
+  </div>
+  <div class="mb-3">
+    <label>Amount</label>
+    <input type="number" [(ngModel)]="amount" class="form-control">
+  </div>
+  <div class="mb-3">
+    <label>Date</label>
+    <input type="date" [(ngModel)]="date" class="form-control">
+  </div>
+    <div class="mb-3">
+    <label>Category</label>
+    <input type="text" [(ngModel)]="category" class="form-control">
+  </div>
+    <div class="mb-3">
+    <label>Description</label>
+    <input type="text" [(ngModel)]="description" class="form-control">
+  </div>
+  <button class="btn btn-primary" (click)="addExpense()">Add</button>
+  <p class="mt-2 text-success">{{ message }}</p>
+</div>

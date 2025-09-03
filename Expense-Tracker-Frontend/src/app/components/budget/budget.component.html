@@ -1,0 +1,33 @@
+<div class="container mt-4">
+  <h2>Monthly Budget</h2>
+
+  <div class="row mb-3">
+    <div class="col-md-3">
+      <input type="number" [(ngModel)]="selectedMonth" class="form-control" placeholder="Month">
+    </div>
+    <div class="col-md-3">
+      <input type="number" [(ngModel)]="selectedYear" class="form-control" placeholder="Year">
+    </div>
+    <div class="col-md-3">
+      <button class="btn btn-primary" (click)="loadBudgetStatus()">Load</button>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-4">
+      <label>Set Budget Amount</label>
+      <input type="number" [(ngModel)]="budgetAmount" class="form-control">
+    </div>
+    <div class="col-md-2 d-flex align-items-end">
+      <button class="btn btn-success" (click)="saveBudget()">Save Budget</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <p><strong>Total Budget:</strong> {{budgetAmount | currency}}</p>
+      <p><strong>Spent:</strong> {{spentAmount | currency}}</p>
+      <p><strong>Remaining:</strong> {{remainingAmount | currency}}</p>
+    </div>
+  </div>
+</div>
